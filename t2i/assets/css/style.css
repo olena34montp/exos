@@ -1,0 +1,128 @@
+:root {
+    --btn-bg: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    --border-c: rgba(148, 187, 233, 1);
+    --alarm-prise-c: rgba(148, 187, 233, 1);
+    --alarm-libre-c: rgba(238, 174, 202, 1);
+    --text-c: #000000;
+    --light-bg: #a0a0a0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+main,
+footer {
+    max-width: 960px;
+    margin: 20px auto;
+}
+
+.none {
+    display: none;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.main-nav__link {
+    display: flex;
+    padding: 10px 20px;
+    border: 2px solid var(--border-c);
+    text-decoration: none;
+    color: var(--text-c);
+}
+
+.main-nav__link:hover {
+    color: #FFFFFF;
+    background: var(--btn-bg);
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.alarmes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+}
+
+.alarmes li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.alarmes-prises,
+.alarmes-libres {
+    padding: 20px;
+    font-weight: 700;
+    list-style: none;
+    border: 2px solid var(--border-c);
+}
+
+.alarmes-prises li {
+    color: var(--alarm-prise-c);
+}
+
+.alarmes-libres li {
+    color: var(--alarm-libre-c);
+}
+
+.info {
+    flex-grow: 1;
+    padding: 20px;
+    border: 2px solid var(--border-c);
+}
+
+.confirmation {
+    color: var(--alarm-prise-c);
+    background-color: rgb(231, 242, 246);
+}
+
+.error {
+    color: red;
+    background-color: var(--alarm-libre-c);
+}
+
+.nouveau-client__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.nouveau-client__label {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+
+small {
+    width: 300px;
+    text-align: right;
+}
+
+.btn {
+    width: max-content;
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 0;
+    border: 2px solid var(--border-c);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--btn-bg);
+    color: #FFFFFF;
+}
+
+.date {
+    text-align: right;
+}
